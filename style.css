@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top right,
+    rgb(255, 169, 169),
+    #fffbc4,
+    rgba(255, 169, 169, 0.24)
+  );
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  border: 1.5rem solid white;
+  border-radius: 2rem;
+  transition: 0.2s;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0.1);
+}
+
+img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.05);
+}
+
+button {
+  font-weight: bold;
+  font-size: 1.35rem;
+  border: none;
+  background-color: #fff;
+  transition: 0.3s;
+  transition-property: background-color, color;
+  cursor: pointer;
+  box-shadow: -1px 2px 25px rgba(0, 0, 0, 0.2);
+}
+
+#prev,
+#next {
+  margin: 0 4rem;
+  padding: 1rem 1.25rem;
+  border-radius: 100rem;
+  font-size: 1.5rem;
+}
+
+#next {
+  order: 1;
+}
+
+#prev {
+  scale: -1 1;
+}
+
+#prev:hover,
+#next:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+#prev:active,
+#next:active {
+  background-color: rgb(22, 192, 22);
+}
+
+#prev:active ~ img {
+  translate: -2rem -2rem;
+  rotate: -9deg;
+}
+
+#next:active ~ img {
+  translate: 2rem -2rem;
+  rotate: 9deg;
+}
+
+.btns button {
+  margin: 3rem 1rem;
+  padding: 0.8rem 1.75rem;
+  border-radius: 1.75rem;
+}
+
+#stop.stop {
+  background-color: rgb(219, 24, 24);
+  color: white;
+}
+
+#play:disabled,
+#play:hover {
+  background-color: rgb(22, 192, 22);
+  color: white;
+  cursor: auto;
+  transform: scale(1);
+  box-shadow: -1px 2px 25px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: scale(0.9);
+  box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.4);
+}

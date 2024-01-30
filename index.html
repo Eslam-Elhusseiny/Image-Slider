@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="imgs container">
+      <button id="prev" value="prev" onclick="prevImg()">&#10140;</button>
+
+      <button id="next" value="next" onclick="nextImg()">&#10140;</button>
+
+      <img class="img" src="images/1.jpg" alt="Nature" />
+    </div>
+
+    <div class="btns container">
+      <button id="play" value="play" onclick="slideShow()">Play</button>
+      <button id="stop" value="stop" onclick="stopShow()">Stop</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
